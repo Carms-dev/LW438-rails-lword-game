@@ -1,0 +1,14 @@
+<h1>Result</h1>
+<p>Score = <%= @score %></p>
+
+<p>
+    <% if @scenario == 1 %>
+        Sorry but <strong><%= @word.upcase %></strong> can't be built out of <%= @letters.chars.join(', ') %>    
+    <% elsif @scenario == 2 %>
+        Sorry but <strong><%= @word.upcase %></strong> does not seem to be a valid English word...
+    <% else %>
+        <strong>Congratulations!</strong> <%= @word.upcase %> is a valid English word!
+    <% end %>
+</p>
+
+<%= link_to "Play again", new_path %>
