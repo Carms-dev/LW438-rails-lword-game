@@ -26,6 +26,11 @@ class GamesController < ApplicationController
         end
         @score = cookies[:score]
     end
+
+    def reset
+        cookies[:score] = 0
+        redirect_to new_path
+    end
     
     private
     
